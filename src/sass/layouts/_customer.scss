@@ -1,0 +1,164 @@
+.customer {
+  padding: 40px 0px 86px 0px;
+  @include mq(tablet) {
+    padding: 61px 0px 120px 0px;
+  }
+  @include mq(desktop) {
+    padding: 61px 0px 130px 0px;
+  }
+}
+.customer-list {
+  &__item {
+    & img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 29px;
+      @include mq(mobile) {
+        margin-bottom: 25px;
+      }
+      @include mq(tablet) {
+        margin-bottom: 19px;
+      }
+      @include mq(desktop) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__wrapper {
+    background-image: url(/images/customer/quote.svg);
+    background-repeat: no-repeat;
+    background-position: 61px 28px;
+    background-size: 55px auto;
+    background-color: var(--bgc-quote-slider);
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 52px;
+
+    @include mq(mobile) {
+      background-position: 61px 28px;
+      width: 400px;
+      margin-bottom: 47px;
+    }
+    @include mq(tablet) {
+      background-position: 61px 28px;
+      width: 620px;
+      height: 164px;
+
+      margin-bottom: 42px;
+    }
+    @include mq(desktop) {
+      background-position: 61px 28px;
+      width: 926px;
+      height: 138px;
+
+      margin-bottom: 34px;
+    }
+  }
+
+  &__text {
+    background: repeating-linear-gradient(
+      to top,
+      transparent,
+      transparent 31px,
+      rgba(225, 225, 225, 1) 32px
+    );
+    background-repeat: no-repeat;
+    background-size: 69% 77%;
+    background-position: 50% 108%;
+    padding: 43px 66px 26px 57px;
+
+    font-family: var(--main-font);
+    @include font(12px, 2.55, 500);
+    color: var(--text-black-color);
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @include mq(mobile) {
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 31px,
+        rgba(225, 225, 225, 1) 32px
+      );
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 45px 68px 30px 73px;
+      max-width: 400px;
+      background-size: 300px 128px;
+    }
+
+    @include mq(tablet) {
+      padding: 47px 80px 34px 80px;
+      @include font(14px, 2.16, 500);
+      max-width: 620px;
+      background-size: 524px 92.8px;
+    }
+    @include mq(desktop) {
+      padding: 47px 89px 39px 87px;
+      @include font(16px, 1.86, 500);
+      max-width: 926px;
+      background-size: 813px 64px;
+    }
+
+    &::before {
+      content: '...';
+      position: absolute;
+      color: #c7133e;
+      font-size: 18.5px;
+
+      bottom: 81px;
+      letter-spacing: 0.4em;
+      left: 44%;
+      @include mq(mobile) {
+        left: 46.2%;
+      }
+      @include mq(tablet) {
+        left: 47.7%;
+      }
+      @include mq(desktop) {
+        left: 48.5%;
+      }
+    }
+  }
+  &__description {
+    margin-bottom: 42px;
+    display: flex;
+    justify-content: center;
+    font-family: var(--main-font);
+    @include font(14px, 1.86, 500);
+    color: var(--text-black-color);
+    @include mq(tablet) {
+      margin-bottom: 47px;
+      @include font(16px, 1.86, 500);
+    }
+    @include mq(desktop) {
+      @include font(20px, 1.86, 500);
+    }
+  }
+}
+.swiper-pagination-bullet-active {
+  background-image: url(/images/customer/house.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0%;
+  background-color: transparent;
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-right: 18px;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0px;
+}
